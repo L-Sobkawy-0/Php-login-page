@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="loginphp." method="post">
+    <form action="login.php" method="post">
 <input name="username" type="text"username placeholder="username">
 <input name="password" type="password"password placeholder="password">
 <button>login</button>
