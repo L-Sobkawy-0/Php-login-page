@@ -8,11 +8,21 @@
 </head>
 
 <body>
-    <form action="login.php" method="post">
+    <form action="loginphp." method="post">
 <input name="username" type="text"username placeholder="username">
 <input name="password" type="password"password placeholder="password">
 <button>login</button>
     </form>
+    <br>
+
+    <a href="comments.php">
+        <button type="button">Comments</button>
+    </a>
+
+    <a href="feedback.php">
+        <button type="button">Feedback</button>
+    </a>
+
 </body>
 </html>
 
