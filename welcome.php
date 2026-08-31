@@ -12,7 +12,7 @@ if (!isset($_SESSION['full_name'])) {
     <title>Welcome</title>
 </head>
 <body>
-    <h1>Welcome, <?php echo $_SESSION['full_name']; ?>!</h1>
+    <h1>Welcome, <?php echo htmlspecialchars($_SESSION['full_name']); ?>!</h1>
 
     <form method="GET">
         <input type="text" name="search_input">
@@ -21,8 +21,8 @@ if (!isset($_SESSION['full_name'])) {
 
     <?php
     if (isset($_GET['search_input'])) {
-        echo "Your input is: " . $_GET['search_input'];
+        echo "Your input is: " . htmlspecialchars($_GET['search_input']);
     }
-    ?>s
+    ?>
 </body>
 </html>
