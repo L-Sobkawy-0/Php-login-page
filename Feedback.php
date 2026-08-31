@@ -5,9 +5,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $feedback = $_POST["feedback"];
 
-    $stmt = $conn->prepare("INSERT INTO Feedback (name, feedback) VALUES (?, ?)");
-    $stmt->bind_param("ss", $name, $feedback);
-    $stmt->execute();
+    $query = "INSERT INTO Feedback (name, feedback) VALUES ('$name', '$feedback')";
+    $conn->query($query);
 
     header("Location: admin.php");
     exit();
