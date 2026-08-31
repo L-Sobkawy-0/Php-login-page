@@ -22,7 +22,7 @@ $result = $conn->query("SELECT * FROM comments");
 <h2>Comments</h2>
 <?php
 while ($row = $result->fetch_assoc()) {
-    echo "<b>" . $row["name"] . "</b><br>";
-    echo $row["comment"] . "<hr>";
+    echo "<b>" . htmlspecialchars($row["name"]) . "</b><br>";
+    echo htmlspecialchars($row["comment"]) . "<hr>";
 }
 ?>
