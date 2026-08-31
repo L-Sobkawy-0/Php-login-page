@@ -7,7 +7,7 @@ $result = $conn->query("SELECT * FROM Feedback");
 
 <?php
 while ($row = $result->fetch_assoc()) {
-    echo "<b>" . $row["name"] . "</b><br>";
-    echo $row["feedback"] . "<hr>";
+    echo "<b>" . htmlspecialchars($row["name"]) . "</b><br>";
+    echo htmlspecialchars($row["feedback"]) . "<hr>";
 }
 ?>
